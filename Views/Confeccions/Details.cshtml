@@ -1,0 +1,30 @@
+﻿@model Confecciones.Models.Confeccion
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Confeccion</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Medidas)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Medidas)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CodEstiloNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CodEstiloNavigation.CodEstilo)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.CodConfeccion">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
